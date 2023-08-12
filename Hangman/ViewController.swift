@@ -11,9 +11,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        fetchRandomMovieAndPrintTitle()
     }
 
-
+    func fetchRandomMovieAndPrintTitle() {
+        
+        let randomFilmID = ListeDeFilmsData.listeFilms.randomElement()!
+        
+        MovieDownloader.shared.fetchMovieDetails(by: randomFilmID) { movie in
+            if let movie = movie {
+                print("Random Movie Title: \(movie.Title)")
+            } else {
+                print("Failed to fetch movie details.")
+            }
+        }
+    }
 }
 

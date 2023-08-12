@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE1057072A87D3810099E160 /* ListeDeFilmsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057062A87D37D0099E160 /* ListeDeFilmsData.swift */; };
+		EE10570F2A87D55F0099E160 /* FilmSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE10570E2A87D55F0099E160 /* FilmSchema.swift */; };
+		EE1057112A87D57F0099E160 /* ImagesSequenceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057102A87D57F0099E160 /* ImagesSequenceData.swift */; };
+		EE1057132A87D5970099E160 /* GestionnaireDeFilms.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057122A87D5970099E160 /* GestionnaireDeFilms.swift */; };
+		EE1057152A87D5AF0099E160 /* JeuPendu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057142A87D5AF0099E160 /* JeuPendu.swift */; };
+		EE1057172A8805C00099E160 /* MovieDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057162A8805C00099E160 /* MovieDownloader.swift */; };
+		EE1057192A8809300099E160 /* TestMovieDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057182A8809300099E160 /* TestMovieDownloader.swift */; };
 		EEBCDE452A87CA9B00BCF0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBCDE442A87CA9B00BCF0C9 /* AppDelegate.swift */; };
 		EEBCDE472A87CA9B00BCF0C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBCDE462A87CA9B00BCF0C9 /* SceneDelegate.swift */; };
 		EEBCDE492A87CA9B00BCF0C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBCDE482A87CA9B00BCF0C9 /* ViewController.swift */; };
@@ -36,6 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE1057062A87D37D0099E160 /* ListeDeFilmsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeDeFilmsData.swift; sourceTree = "<group>"; };
+		EE10570E2A87D55F0099E160 /* FilmSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSchema.swift; sourceTree = "<group>"; };
+		EE1057102A87D57F0099E160 /* ImagesSequenceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesSequenceData.swift; sourceTree = "<group>"; };
+		EE1057122A87D5970099E160 /* GestionnaireDeFilms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionnaireDeFilms.swift; sourceTree = "<group>"; };
+		EE1057142A87D5AF0099E160 /* JeuPendu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuPendu.swift; sourceTree = "<group>"; };
+		EE1057162A8805C00099E160 /* MovieDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDownloader.swift; sourceTree = "<group>"; };
+		EE1057182A8809300099E160 /* TestMovieDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMovieDownloader.swift; sourceTree = "<group>"; };
 		EEBCDE412A87CA9B00BCF0C9 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBCDE442A87CA9B00BCF0C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEBCDE462A87CA9B00BCF0C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +90,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE1057082A87D4C40099E160 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EE1057092A87D4CF0099E160 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		EE10570C2A87D4F40099E160 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE1057062A87D37D0099E160 /* ListeDeFilmsData.swift */,
+				EE10570E2A87D55F0099E160 /* FilmSchema.swift */,
+				EE1057102A87D57F0099E160 /* ImagesSequenceData.swift */,
+				EE1057122A87D5970099E160 /* GestionnaireDeFilms.swift */,
+				EE1057142A87D5AF0099E160 /* JeuPendu.swift */,
+				EE1057162A8805C00099E160 /* MovieDownloader.swift */,
+				EE1057182A8809300099E160 /* TestMovieDownloader.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE10570D2A87D5160099E160 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EEBCDE4A2A87CA9B00BCF0C9 /* Main.storyboard */,
+				EEBCDE4F2A87CA9C00BCF0C9 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EEBCDE382A87CA9B00BCF0C9 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +150,14 @@
 		EEBCDE432A87CA9B00BCF0C9 /* Hangman */ = {
 			isa = PBXGroup;
 			children = (
-				EEBCDE442A87CA9B00BCF0C9 /* AppDelegate.swift */,
+				EE10570C2A87D4F40099E160 /* Model */,
+				EE1057092A87D4CF0099E160 /* Ressources */,
+				EE1057082A87D4C40099E160 /* Controller */,
+				EE10570D2A87D5160099E160 /* Views */,
 				EEBCDE462A87CA9B00BCF0C9 /* SceneDelegate.swift */,
+				EEBCDE442A87CA9B00BCF0C9 /* AppDelegate.swift */,
 				EEBCDE482A87CA9B00BCF0C9 /* ViewController.swift */,
-				EEBCDE4A2A87CA9B00BCF0C9 /* Main.storyboard */,
 				EEBCDE4D2A87CA9C00BCF0C9 /* Assets.xcassets */,
-				EEBCDE4F2A87CA9C00BCF0C9 /* LaunchScreen.storyboard */,
 				EEBCDE522A87CA9C00BCF0C9 /* Info.plist */,
 			);
 			path = Hangman;
@@ -258,8 +311,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE1057132A87D5970099E160 /* GestionnaireDeFilms.swift in Sources */,
+				EE1057152A87D5AF0099E160 /* JeuPendu.swift in Sources */,
+				EE1057072A87D3810099E160 /* ListeDeFilmsData.swift in Sources */,
+				EE10570F2A87D55F0099E160 /* FilmSchema.swift in Sources */,
+				EE1057172A8805C00099E160 /* MovieDownloader.swift in Sources */,
 				EEBCDE492A87CA9B00BCF0C9 /* ViewController.swift in Sources */,
 				EEBCDE452A87CA9B00BCF0C9 /* AppDelegate.swift in Sources */,
+				EE1057192A8809300099E160 /* TestMovieDownloader.swift in Sources */,
+				EE1057112A87D57F0099E160 /* ImagesSequenceData.swift in Sources */,
 				EEBCDE472A87CA9B00BCF0C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
