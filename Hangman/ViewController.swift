@@ -8,13 +8,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var devinetteLabel: UITextView!
+    @IBOutlet weak var userInputField: UIPickerView!
+    @IBOutlet weak var userUsedLetters: UITextField!
+    @IBOutlet weak var hangmanView: UIImageView!
+    @IBOutlet weak var EnterButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        
         fetchRandomMovieAndPrintTitle()
     }
-
+    
     func fetchRandomMovieAndPrintTitle() {
         
         let randomFilmID = ListeDeFilmsData.listeFilms.randomElement()!
