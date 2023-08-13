@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         
         MovieDownloader.shared.fetchMovieDetails(by: randomFilmID) { movie in
             if let movie = movie {
-                print("Random Movie Title: \(movie.Title)")
+                print((movie.Title))
             } else {
                 print("Failed to fetch movie details.")
             }
