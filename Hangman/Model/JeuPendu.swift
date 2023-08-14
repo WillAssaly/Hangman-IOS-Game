@@ -45,14 +45,21 @@ class JeuPendu {
     var erreurs: String {
         return "\(nbErreurs) / \(maxErreur)"
     }
-    var image : UIImage {
-        return UIImage(named: imageNamesSequence[nbErreurs])!
+    
+    var currentErrors: Int { //new
+        return nbErreurs
     }
+    
+    var image : UIImage? {
+        return nbErreurs > 0 ? UIImage(named: imageNamesSequence[nbErreurs - 1]) : nil
+    }
+
     
     func jouer (avec movie: Movie) {
         filmADeviner = movie
         titreADeviner = Array(movie.Title)
         indexTrouves = Array(repeating: false, count: titreADeviner.count)
+        lettresUtilisateurs = [] 
         
         titreADeviner.enumerated().forEach {(idx, lettre) in
             if
