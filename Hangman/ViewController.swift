@@ -57,7 +57,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
        func updateUI() {
            DispatchQueue.main.async {  // Ensure UI updates are made on the main thread
                self.devinetteLabel.text = JeuPendu.shared.devinette.replacingOccurrences(of: "#", with: "-")
-               print("Letters to display: \(JeuPendu.shared.lettreUtilisees)") // Debugging line
+//               print("Letters to display: \(JeuPendu.shared.lettreUtilisees)") // Debugging line
                self.userUsedLetters.text = JeuPendu.shared.lettreUtilisees
                self.hangmanView.image = JeuPendu.shared.image
                self.PointsLabel.text = "Points: \(JeuPendu.shared.currentErrors) / 7"

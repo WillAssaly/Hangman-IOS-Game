@@ -67,7 +67,6 @@ class JeuPendu {
                 indexTrouves[idx] = true
             }
         }
-        print("DB: jouer() ", devinette)
         
         nbErreurs = 0
         

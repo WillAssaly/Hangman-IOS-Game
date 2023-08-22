@@ -23,6 +23,9 @@
 		EEBCDE5C2A87CA9C00BCF0C9 /* HangmanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBCDE5B2A87CA9C00BCF0C9 /* HangmanTests.swift */; };
 		EEBCDE662A87CA9C00BCF0C9 /* HangmanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBCDE652A87CA9C00BCF0C9 /* HangmanUITests.swift */; };
 		EEBCDE682A87CA9C00BCF0C9 /* HangmanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBCDE672A87CA9C00BCF0C9 /* HangmanUITestsLaunchTests.swift */; };
+		EEF1E1642A93E60F00E8308B /* FilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF1E1632A93E60F00E8308B /* FilmsViewController.swift */; };
+		EEF1E1662A93E86900E8308B /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF1E1652A93E86900E8308B /* DictionaryViewController.swift */; };
+		EEF1E1682A93E87F00E8308B /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF1E1672A93E87F00E8308B /* StatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		EEBCDE612A87CA9C00BCF0C9 /* HangmanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangmanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBCDE652A87CA9C00BCF0C9 /* HangmanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanUITests.swift; sourceTree = "<group>"; };
 		EEBCDE672A87CA9C00BCF0C9 /* HangmanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EEF1E1632A93E60F00E8308B /* FilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
+		EEF1E1652A93E86900E8308B /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		EEF1E1672A93E87F00E8308B /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,9 @@
 			children = (
 				EEBCDE4A2A87CA9B00BCF0C9 /* Main.storyboard */,
 				EEBCDE4F2A87CA9C00BCF0C9 /* LaunchScreen.storyboard */,
+				EEF1E1632A93E60F00E8308B /* FilmsViewController.swift */,
+				EEF1E1652A93E86900E8308B /* DictionaryViewController.swift */,
+				EEF1E1672A93E87F00E8308B /* StatsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -317,6 +326,9 @@
 				EE10570F2A87D55F0099E160 /* FilmSchema.swift in Sources */,
 				EE1057172A8805C00099E160 /* MovieDownloader.swift in Sources */,
 				EEBCDE492A87CA9B00BCF0C9 /* ViewController.swift in Sources */,
+				EEF1E1662A93E86900E8308B /* DictionaryViewController.swift in Sources */,
+				EEF1E1642A93E60F00E8308B /* FilmsViewController.swift in Sources */,
+				EEF1E1682A93E87F00E8308B /* StatsViewController.swift in Sources */,
 				EEBCDE452A87CA9B00BCF0C9 /* AppDelegate.swift in Sources */,
 				EE1057192A8809300099E160 /* TestMovieDownloader.swift in Sources */,
 				EE1057112A87D57F0099E160 /* ImagesSequenceData.swift in Sources */,
