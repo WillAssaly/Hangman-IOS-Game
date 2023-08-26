@@ -13,6 +13,8 @@ class DictionaryViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = "Dictionary"
+        self.tabBarItem.title = "Dictionary"
     }
     
 

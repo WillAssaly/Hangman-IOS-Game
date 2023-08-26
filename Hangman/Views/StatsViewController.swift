@@ -13,6 +13,8 @@ class StatsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = "Stats"
+        self.tabBarItem.title = "Stats"
     }
     
 

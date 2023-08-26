@@ -10,6 +10,9 @@ import Foundation
 
 struct Movie: Decodable {
     let Title: String
+    let Year: String
+    let Director: String
+    
 }
 
 class MovieDownloader {

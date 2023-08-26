@@ -8,18 +8,7 @@
 import Foundation
 import UIKit
 
-struct EndOfGameInformation {
-    let win: Bool
-    let title: String
-    let cntErrors: Int
-    var finalMessage: String {
-        return """
-win: \(win) in \(cntErrors)/7.
-Title was:
-\(title)
-"""
-    }
-}
+
 
 class JeuPendu {
     static let shared: JeuPendu = JeuPendu()
@@ -70,6 +59,8 @@ class JeuPendu {
         
         nbErreurs = 0
         
+       
+        
     }
     
     func verifier(lettre: Character) {
@@ -89,15 +80,74 @@ class JeuPendu {
         }
     }
     
-    func verifierFinDepartie() -> String? {
-        if nbErreurs == maxErreur {
-            return EndOfGameInformation(win: false, title:
-                                            String(titreADeviner), cntErrors: nbErreurs).finalMessage
-            
-        }
-        return nil
+    
+    enum GameResult {
+        case won
+        case lost
+        case ongoing
+    }
+    
+    var gameStatus: GameResult {
+        if !indexTrouves.contains(false) { // All letters are found
+            return .won
+        } else if nbErreurs == maxErreur { // Maximum number of errors reached
+            return .lost
+        } else {
+            return .ongoing
         }
     }
+    
+    func verifierFinDepartie() -> EndOfGameInformation? {
+        switch gameStatus {
+        case .won:
+            return EndOfGameInformation(win: true, title: String(titreADeviner), cntErrors: nbErreurs)
+        case .lost:
+            return EndOfGameInformation(win: false, title: String(titreADeviner), cntErrors: nbErreurs)
+        case .ongoing:
+            return nil
+        }
+    }
+    
+//    func verifierFinDepartie() -> String? {
+//        if nbErreurs == maxErreur {
+//            return EndOfGameInformation(win: false, title:
+//                                            String(titreADeviner), cntErrors: nbErreurs).finalMessage
+//
+//        }
+//        return nil
+//        }
+    
+//    func verifierFinDepartie() -> String? {
+//        if nbErreurs == maxErreur {
+//            return EndOfGameInformation(win: false, title: String(titreADeviner), cntErrors: nbErreurs).finalMessage
+//        } else if !indexTrouves.contains(false) {
+//            return EndOfGameInformation(win: true, title: String(titreADeviner), cntErrors: nbErreurs).finalMessage
+//        }
+//        return nil
+//    }
+    }
+
+struct EndOfGameInformation {
+    let win: Bool
+    let title: String
+    let cntErrors: Int
+    var finalMessage: String {
+        if win {
+            return """
+            Congratulations!
+            You guessed the title correctly!
+            in \(cntErrors)/7 attempts.
+            """
+        } else {
+            return """
+            Game Over!
+            The correct answer was:
+            \(title)
+            You made \(cntErrors) errors out of 7.
+            """
+        }
+    }
+}
     
     
     
