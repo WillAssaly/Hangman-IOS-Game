@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  Hangman
+
+  Created by William Workdesk on 2023-09-12.
+  
+*/
+
+"startButton_key" = "Start";
+"enterButton_key" = "Enter";
+"gobackButton_key" = "Go back";
+"backButton_key" = "Back";
+"hintLabel_key" = "Hint";
+"languageLabel_key" = "Language";
+"lettersusedLabel_key" = "Letters used:";
+"hangmanLabel_key" = "Hangman";
+"errorsLabel_key" = "Errors: %d/7";
+"dictionaryTabButton_key" = "Dictionary";
+"deviceTab_key" = "Device";
+"lightTab_key" = "Light";
+"darkTab_key" = "Dark";
+
+"win_message" = "Congratulations! You won with %d errors. The answer was %@.";
+"lose_message" = "Sorry you lost with %d errors. The correct word was %@.";
+

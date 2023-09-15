@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0D3C952AB14CFE001EA127 /* Localizable_En.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE0D3C972AB14CFE001EA127 /* Localizable_En.strings */; };
+		EE0D3C9B2AB14F61001EA127 /* Localizable_Fr.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE0D3C9D2AB14F61001EA127 /* Localizable_Fr.strings */; };
+		EE0D3C9F2AB33D75001EA127 /* ScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D3C9E2AB33D75001EA127 /* ScoreTableViewCell.swift */; };
 		EE1057072A87D3810099E160 /* ListeDeFilmsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057062A87D37D0099E160 /* ListeDeFilmsData.swift */; };
 		EE10570F2A87D55F0099E160 /* FilmSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE10570E2A87D55F0099E160 /* FilmSchema.swift */; };
 		EE1057112A87D57F0099E160 /* ImagesSequenceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057102A87D57F0099E160 /* ImagesSequenceData.swift */; };
 		EE1057132A87D5970099E160 /* GestionnaireDeFilms.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057122A87D5970099E160 /* GestionnaireDeFilms.swift */; };
 		EE1057152A87D5AF0099E160 /* JeuPendu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057142A87D5AF0099E160 /* JeuPendu.swift */; };
 		EE1057172A8805C00099E160 /* MovieDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057162A8805C00099E160 /* MovieDownloader.swift */; };
-		EE1057192A8809300099E160 /* TestMovieDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057182A8809300099E160 /* TestMovieDownloader.swift */; };
+		EE3646AC2AB10C6300EA553B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE3646AA2AB10C6300EA553B /* DataModel.xcdatamodeld */; };
+		EE3646AE2AB11BDA00EA553B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3646AD2AB11BDA00EA553B /* PreferencesViewController.swift */; };
+		EE3646B02AB11C5700EA553B /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3646AF2AB11C5700EA553B /* ScoresViewController.swift */; };
+		EE3646B22AB1370900EA553B /* AppEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3646B12AB1370900EA553B /* AppEnums.swift */; };
 		EE7E42DD2A96926400E55B85 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E42DC2A96926400E55B85 /* EndGameViewController.swift */; };
+		EE7E42DF2A9A94E700E55B85 /* DictionaryDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E42DE2A9A94E700E55B85 /* DictionaryDownloader.swift */; };
 		EEBCDE452A87CA9B00BCF0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBCDE442A87CA9B00BCF0C9 /* AppDelegate.swift */; };
 		EEBCDE472A87CA9B00BCF0C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBCDE462A87CA9B00BCF0C9 /* SceneDelegate.swift */; };
 		EEBCDE492A87CA9B00BCF0C9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBCDE482A87CA9B00BCF0C9 /* GameViewController.swift */; };
@@ -47,14 +54,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE0D3C8F2AB14BC6001EA127 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		EE0D3C902AB14BC6001EA127 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EE0D3C962AB14CFE001EA127 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable_En.strings; sourceTree = "<group>"; };
+		EE0D3C9C2AB14F61001EA127 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable_Fr.strings; sourceTree = "<group>"; };
+		EE0D3C9E2AB33D75001EA127 /* ScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewCell.swift; sourceTree = "<group>"; };
 		EE1057062A87D37D0099E160 /* ListeDeFilmsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeDeFilmsData.swift; sourceTree = "<group>"; };
 		EE10570E2A87D55F0099E160 /* FilmSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSchema.swift; sourceTree = "<group>"; };
 		EE1057102A87D57F0099E160 /* ImagesSequenceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesSequenceData.swift; sourceTree = "<group>"; };
 		EE1057122A87D5970099E160 /* GestionnaireDeFilms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionnaireDeFilms.swift; sourceTree = "<group>"; };
 		EE1057142A87D5AF0099E160 /* JeuPendu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuPendu.swift; sourceTree = "<group>"; };
 		EE1057162A8805C00099E160 /* MovieDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDownloader.swift; sourceTree = "<group>"; };
-		EE1057182A8809300099E160 /* TestMovieDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMovieDownloader.swift; sourceTree = "<group>"; };
+		EE3646AB2AB10C6300EA553B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		EE3646AD2AB11BDA00EA553B /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		EE3646AF2AB11C5700EA553B /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
+		EE3646B12AB1370900EA553B /* AppEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnums.swift; sourceTree = "<group>"; };
 		EE7E42DC2A96926400E55B85 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
+		EE7E42DE2A9A94E700E55B85 /* DictionaryDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDownloader.swift; sourceTree = "<group>"; };
 		EEBCDE412A87CA9B00BCF0C9 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBCDE442A87CA9B00BCF0C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEBCDE462A87CA9B00BCF0C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +137,7 @@
 				EE1057122A87D5970099E160 /* GestionnaireDeFilms.swift */,
 				EE1057142A87D5AF0099E160 /* JeuPendu.swift */,
 				EE1057162A8805C00099E160 /* MovieDownloader.swift */,
-				EE1057182A8809300099E160 /* TestMovieDownloader.swift */,
+				EE7E42DE2A9A94E700E55B85 /* DictionaryDownloader.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +152,9 @@
 				EEF1E1652A93E86900E8308B /* DictionaryViewController.swift */,
 				EEF1E1672A93E87F00E8308B /* StatsViewController.swift */,
 				EE7E42DC2A96926400E55B85 /* EndGameViewController.swift */,
+				EE3646AD2AB11BDA00EA553B /* PreferencesViewController.swift */,
+				EE3646AF2AB11C5700EA553B /* ScoresViewController.swift */,
+				EE0D3C9E2AB33D75001EA127 /* ScoreTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +190,10 @@
 				EEBCDE442A87CA9B00BCF0C9 /* AppDelegate.swift */,
 				EEBCDE4D2A87CA9C00BCF0C9 /* Assets.xcassets */,
 				EEBCDE522A87CA9C00BCF0C9 /* Info.plist */,
+				EE3646AA2AB10C6300EA553B /* DataModel.xcdatamodeld */,
+				EE3646B12AB1370900EA553B /* AppEnums.swift */,
+				EE0D3C972AB14CFE001EA127 /* Localizable_En.strings */,
+				EE0D3C9D2AB14F61001EA127 /* Localizable_Fr.strings */,
 			);
 			path = Hangman;
 			sourceTree = "<group>";
@@ -278,6 +301,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = EEBCDE382A87CA9B00BCF0C9;
 			productRefGroup = EEBCDE422A87CA9B00BCF0C9 /* Products */;
@@ -296,7 +320,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0D3C9B2AB14F61001EA127 /* Localizable_Fr.strings in Resources */,
 				EEBCDE512A87CA9C00BCF0C9 /* LaunchScreen.storyboard in Resources */,
+				EE0D3C952AB14CFE001EA127 /* Localizable_En.strings in Resources */,
 				EEBCDE4E2A87CA9C00BCF0C9 /* Assets.xcassets in Resources */,
 				EEBCDE4C2A87CA9B00BCF0C9 /* Main.storyboard in Resources */,
 			);
@@ -324,16 +350,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE1057132A87D5970099E160 /* GestionnaireDeFilms.swift in Sources */,
+				EE0D3C9F2AB33D75001EA127 /* ScoreTableViewCell.swift in Sources */,
 				EE1057152A87D5AF0099E160 /* JeuPendu.swift in Sources */,
 				EE1057072A87D3810099E160 /* ListeDeFilmsData.swift in Sources */,
 				EE10570F2A87D55F0099E160 /* FilmSchema.swift in Sources */,
+				EE3646B22AB1370900EA553B /* AppEnums.swift in Sources */,
 				EE1057172A8805C00099E160 /* MovieDownloader.swift in Sources */,
 				EEBCDE492A87CA9B00BCF0C9 /* GameViewController.swift in Sources */,
+				EE3646AC2AB10C6300EA553B /* DataModel.xcdatamodeld in Sources */,
 				EEF1E1662A93E86900E8308B /* DictionaryViewController.swift in Sources */,
 				EEF1E1642A93E60F00E8308B /* FilmsViewController.swift in Sources */,
 				EEF1E1682A93E87F00E8308B /* StatsViewController.swift in Sources */,
 				EEBCDE452A87CA9B00BCF0C9 /* AppDelegate.swift in Sources */,
-				EE1057192A8809300099E160 /* TestMovieDownloader.swift in Sources */,
+				EE3646AE2AB11BDA00EA553B /* PreferencesViewController.swift in Sources */,
+				EE3646B02AB11C5700EA553B /* ScoresViewController.swift in Sources */,
+				EE7E42DF2A9A94E700E55B85 /* DictionaryDownloader.swift in Sources */,
 				EE1057112A87D57F0099E160 /* ImagesSequenceData.swift in Sources */,
 				EE7E42DD2A96926400E55B85 /* EndGameViewController.swift in Sources */,
 				EEBCDE472A87CA9B00BCF0C9 /* SceneDelegate.swift in Sources */,
@@ -373,10 +404,27 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EE0D3C972AB14CFE001EA127 /* Localizable_En.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE0D3C962AB14CFE001EA127 /* en */,
+			);
+			name = Localizable_En.strings;
+			sourceTree = "<group>";
+		};
+		EE0D3C9D2AB14F61001EA127 /* Localizable_Fr.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE0D3C9C2AB14F61001EA127 /* fr */,
+			);
+			name = Localizable_Fr.strings;
+			sourceTree = "<group>";
+		};
 		EEBCDE4A2A87CA9B00BCF0C9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EEBCDE4B2A87CA9B00BCF0C9 /* Base */,
+				EE0D3C8F2AB14BC6001EA127 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -385,6 +433,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EEBCDE502A87CA9C00BCF0C9 /* Base */,
+				EE0D3C902AB14BC6001EA127 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -396,6 +445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -456,6 +506,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -513,8 +564,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P72S93TL43;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hangman/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -525,7 +579,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willassaly.Hangman;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willassaly.HangmanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -540,8 +594,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P72S93TL43;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hangman/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -552,7 +609,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willassaly.Hangman;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willassaly.HangmanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -570,7 +627,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willassaly.HangmanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -589,7 +645,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willassaly.HangmanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -672,6 +727,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EE3646AA2AB10C6300EA553B /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE3646AB2AB10C6300EA553B /* DataModel.xcdatamodel */,
+			);
+			currentVersion = EE3646AB2AB10C6300EA553B /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EEBCDE392A87CA9B00BCF0C9 /* Project object */;
 }

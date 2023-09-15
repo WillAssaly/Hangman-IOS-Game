@@ -12,10 +12,13 @@ struct Movie: Decodable {
     let Title: String
     let Year: String
     let Director: String
+    let imdbID: String
     
 }
 
 class MovieDownloader {
+    
+
     
     static let shared = MovieDownloader()
     

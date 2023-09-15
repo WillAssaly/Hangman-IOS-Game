@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Hangman
+
+  Created by William Workdesk on 2023-09-12.
+  
+*/
+
+"HintKey" = "hint";
+

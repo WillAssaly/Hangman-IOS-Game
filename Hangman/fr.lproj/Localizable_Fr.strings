@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  Hangman
+
+  Created by William Workdesk on 2023-09-12.
+  
+*/
+
+"startButton_key" = "Démarrer";
+"enterButton_key" = "Entrer";
+"gobackButton_key" = "Revenir";
+"backButton_key" = "Retour";
+"hintLabel_key" = "Indice";
+"languageLabel_key" = "Langue";
+"lettersusedLabel_key" = "Lettres utilisées:";
+"hangmanLabel_key" = "Bonhomme Pendu";
+"errorsLabel_key" = "Erreurs : %d/7";
+"dictionaryTabButton_key" = "Dictionnaire";
+"deviceTab_key" = "Appareil";
+"lightTab_key" = "Lumineux";
+"darkTab_key" = "Sombre";
+
+"win_message" = "Félicitations ! Vous avez gagné avec %d erreurs. La réponse était %@.";
+"lose_message" = "Désolé, vous avez perdu avec %d erreurs. Le mot correct était %@.";

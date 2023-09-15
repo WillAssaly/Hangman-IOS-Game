@@ -8,6 +8,8 @@
 import UIKit
 
 class StatsViewController: UIViewController {
+    @IBOutlet weak var scoresButton: UIButton!
+    @IBOutlet weak var preferencesButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()

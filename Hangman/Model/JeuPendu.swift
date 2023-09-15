@@ -21,6 +21,8 @@ class JeuPendu {
     private var indexTrouves: [Bool] = []
     private var lettresUtilisateurs: [Character] = []
     var filmADeviner: Movie?
+    var score: Int = 0
+    
     
     var devinette: String {
         let arr = indexTrouves.indices.map {indexTrouves[$0]
@@ -39,46 +41,57 @@ class JeuPendu {
         return nbErreurs
     }
     
+    var isGameInProgress: Bool {
+        return !(devinette == String(repeating: "#", count: devinette.count))
+    }
+    
     var image : UIImage? {
         return nbErreurs > 0 ? UIImage(named: imageNamesSequence[nbErreurs - 1]) : nil
     }
 
     
-    func jouer (avec movie: Movie) {
-        filmADeviner = movie
-        titreADeviner = Array(movie.Title)
-        indexTrouves = Array(repeating: false, count: titreADeviner.count)
-        lettresUtilisateurs = [] 
-        
-        titreADeviner.enumerated().forEach {(idx, lettre) in
-            if
-                !("abcdefghijklmnopqrstuvwxyz".contains(lettre.lowercased())) {
-                indexTrouves[idx] = true
-            }
-        }
-        
-        nbErreurs = 0
-        
+    func jouer(avec movie: Movie) {
+           filmADeviner = movie
+           resetGame(withTitle: movie.Title)
+       }
        
+       func jouer(avecMot word: String) {
+           filmADeviner = nil  // Reset the movie property
+           resetGame(withTitle: word)
+       }
+    private func resetGame(withTitle title: String) {
+            titreADeviner = Array(title)
+            indexTrouves = Array(repeating: false, count: titreADeviner.count)
+            lettresUtilisateurs = []
+            
+            titreADeviner.enumerated().forEach {(idx, lettre) in
+                if !("abcdefghijklmnopqrstuvwxyz".contains(lettre.lowercased())) {
+                    indexTrouves[idx] = true
+                }
+            }
         
-    }
+            nbErreurs = 0
+            score = 0
+        }
+
     
     func verifier(lettre: Character) {
-        lettresUtilisateurs.append(lettre)
-        var trouvee = false
-        
-        titreADeviner.enumerated().forEach{ ( idx, lettreMystere) in
-            if lettreMystere.lowercased() ==
-                lettre.lowercased() {
-                indexTrouves[idx] = true
-                trouvee = true
+            lettresUtilisateurs.append(lettre)
+            var trouvee = false
+            
+            titreADeviner.enumerated().forEach{ ( idx, lettreMystere) in
+                if lettreMystere.lowercased() == lettre.lowercased() {
+                    indexTrouves[idx] = true
+                    trouvee = true
+                    score += 10
+                }
+            }
+            
+            if !trouvee {
+                nbErreurs += 1
+                score -= 5
             }
         }
-        
-        if !trouvee {
-            nbErreurs += 1
-        }
-    }
     
     
     enum GameResult {
@@ -88,7 +101,8 @@ class JeuPendu {
     }
     
     var gameStatus: GameResult {
-        if !indexTrouves.contains(false) { // All letters are found
+        if !indexTrouves.contains(false) {// All letters are found
+            score += 50
             return .won
         } else if nbErreurs == maxErreur { // Maximum number of errors reached
             return .lost
@@ -98,58 +112,48 @@ class JeuPendu {
     }
     
     func verifierFinDepartie() -> EndOfGameInformation? {
+        let currentGameMode: GameMode = filmADeviner != nil ? .movie : .dictionary
+        
         switch gameStatus {
         case .won:
-            return EndOfGameInformation(win: true, title: String(titreADeviner), cntErrors: nbErreurs)
+            return EndOfGameInformation(win: true, title: String(titreADeviner), cntErrors: nbErreurs, gameMode: currentGameMode, finalScore: score)
         case .lost:
-            return EndOfGameInformation(win: false, title: String(titreADeviner), cntErrors: nbErreurs)
+            return EndOfGameInformation(win: false, title: String(titreADeviner), cntErrors: nbErreurs, gameMode: currentGameMode, finalScore: score)
         case .ongoing:
             return nil
         }
     }
     
-//    func verifierFinDepartie() -> String? {
-//        if nbErreurs == maxErreur {
-//            return EndOfGameInformation(win: false, title:
-//                                            String(titreADeviner), cntErrors: nbErreurs).finalMessage
-//
-//        }
-//        return nil
-//        }
     
-//    func verifierFinDepartie() -> String? {
-//        if nbErreurs == maxErreur {
-//            return EndOfGameInformation(win: false, title: String(titreADeviner), cntErrors: nbErreurs).finalMessage
-//        } else if !indexTrouves.contains(false) {
-//            return EndOfGameInformation(win: true, title: String(titreADeviner), cntErrors: nbErreurs).finalMessage
-//        }
-//        return nil
-//    }
+
     }
 
+
+
 struct EndOfGameInformation {
-    let win: Bool
-    let title: String
-    let cntErrors: Int
+    var win: Bool
+    var title: String? // movie title or dictionary word
+    var cntErrors: Int
+    var gameMode: GameMode
+    var finalScore: Int
+
     var finalMessage: String {
         if win {
-            return """
-            Congratulations!
-            You guessed the title correctly!
-            in \(cntErrors)/7 attempts.
-            """
+            return "Congratulations! You won with \(cntErrors) errors. The answer was \(title ?? "Unknown")."
         } else {
-            return """
-            Game Over!
-            The correct answer was:
-            \(title)
-            You made \(cntErrors) errors out of 7.
-            """
+            switch gameMode {
+            case .movie:
+                return "Sorry, you lost with \(cntErrors) errors. The correct movie was \(title ?? "Unknown")."
+            case .dictionary:
+                return "Sorry, you lost with \(cntErrors) errors. The correct word was \(title ?? "Unknown")."
+            }
         }
     }
 }
-    
-    
-    
-    
+
+
+
+
+
+
 

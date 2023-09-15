@@ -1,0 +1,102 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1dF-Y1-LCY"; */
+"1dF-Y1-LCY.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Start"; ObjectID = "1wv-qo-870"; */
+"1wv-qo-870.configuration.title" = "Start";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1wv-qo-870"; */
+"1wv-qo-870.normalTitle" = "Button";
+
+/* Class = "UINavigationController"; title = "Dictionary"; ObjectID = "6wV-jT-TkQ"; */
+"6wV-jT-TkQ.title" = "Dictionary";
+
+/* Class = "UILabel"; text = "Hangman"; ObjectID = "7lJ-ly-2E0"; */
+"7lJ-ly-2E0.text" = "Hangman";
+
+/* Class = "UILabel"; text = "Errors: 0 / 7"; ObjectID = "9dY-ic-n1W"; */
+"9dY-ic-n1W.text" = "Errors: 0 / 7";
+
+/* Class = "UIButton"; configuration.title = "Scores"; ObjectID = "B4Y-jh-WEe"; */
+"B4Y-jh-WEe.configuration.title" = "Scores";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "B4Y-jh-WEe"; */
+"B4Y-jh-WEe.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "DEV-il-rBK"; */
+"DEV-il-rBK.text" = "Label";
+
+/* Class = "UILabel"; text = "Hint:"; ObjectID = "K79-4N-m95"; */
+"K79-4N-m95.text" = "Hint:";
+
+/* Class = "UILabel"; text = "Theme"; ObjectID = "M7A-vN-sO8"; */
+"M7A-vN-sO8.text" = "Theme";
+
+/* Class = "UILabel"; text = "Hint:"; ObjectID = "S9q-8W-aKR"; */
+"S9q-8W-aKR.text" = "Hint:";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "U1e-3S-oOA"; */
+"U1e-3S-oOA.text" = "Language";
+
+/* Class = "UIButton"; configuration.title = "Start"; ObjectID = "a0O-2D-GtV"; */
+"a0O-2D-GtV.configuration.title" = "Start";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "a0O-2D-GtV"; */
+"a0O-2D-GtV.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Letters used: "; ObjectID = "aPW-ZA-ac6"; */
+"aPW-ZA-ac6.text" = "Letters used: ";
+
+/* Class = "UINavigationController"; title = "Flims"; ObjectID = "cP7-gT-aCz"; */
+"cP7-gT-aCz.title" = "Flims";
+
+/* Class = "UIButton"; configuration.title = "Go back"; ObjectID = "eup-K2-FnZ"; */
+"eup-K2-FnZ.configuration.title" = "Go back";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "eup-K2-FnZ"; */
+"eup-K2-FnZ.normalTitle" = "Button";
+
+/* Class = "UISegmentedControl"; gB9-lc-dXp.segmentTitles[0] = "Device"; ObjectID = "gB9-lc-dXp"; */
+"gB9-lc-dXp.segmentTitles[0]" = "Device";
+
+/* Class = "UISegmentedControl"; gB9-lc-dXp.segmentTitles[1] = "Light"; ObjectID = "gB9-lc-dXp"; */
+"gB9-lc-dXp.segmentTitles[1]" = "Light";
+
+/* Class = "UISegmentedControl"; gB9-lc-dXp.segmentTitles[2] = "Dark"; ObjectID = "gB9-lc-dXp"; */
+"gB9-lc-dXp.segmentTitles[2]" = "Dark";
+
+/* Class = "UITabBarItem"; title = "Films"; ObjectID = "gU0-XY-5Yj"; */
+"gU0-XY-5Yj.title" = "Films";
+
+/* Class = "UITabBarItem"; title = "Dictionary"; ObjectID = "i1d-jp-Hkg"; */
+"i1d-jp-Hkg.title" = "Dictionary";
+
+/* Class = "UISegmentedControl"; iNv-cn-8sX.segmentTitles[0] = "English"; ObjectID = "iNv-cn-8sX"; */
+"iNv-cn-8sX.segmentTitles[0]" = "English";
+
+/* Class = "UISegmentedControl"; iNv-cn-8sX.segmentTitles[1] = "Francais"; ObjectID = "iNv-cn-8sX"; */
+"iNv-cn-8sX.segmentTitles[1]" = "Francais";
+
+/* Class = "UIViewController"; title = "Stats"; ObjectID = "kdp-2Y-71y"; */
+"kdp-2Y-71y.title" = "Stats";
+
+/* Class = "UITabBarItem"; title = "Stats"; ObjectID = "kim-PA-f15"; */
+"kim-PA-f15.title" = "Stats";
+
+/* Class = "UIButton"; configuration.title = "Preferences"; ObjectID = "m7r-6H-mur"; */
+"m7r-6H-mur.configuration.title" = "Preferences";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "m7r-6H-mur"; */
+"m7r-6H-mur.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Back"; ObjectID = "wQg-sa-ke4"; */
+"wQg-sa-ke4.configuration.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wQg-sa-ke4"; */
+"wQg-sa-ke4.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Enter"; ObjectID = "ye1-RA-FCf"; */
+"ye1-RA-FCf.configuration.title" = "Enter";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ye1-RA-FCf"; */
+"ye1-RA-FCf.normalTitle" = "Button";
