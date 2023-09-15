@@ -7,14 +7,10 @@
 
 import UIKit
 
-//protocol FilmsViewControllerDelegate: AnyObject {
-//    func didChooseMovie(with id: String)
-//}
 
 class FilmsViewController: UIViewController {
     @IBOutlet weak var StartGameButton: UIButton!
     @IBOutlet weak var hintLabel: UILabel!
-//    weak var delegate: FilmsViewControllerDelegate?
     
     var selectedMovie: Movie?
     
@@ -58,26 +54,6 @@ class FilmsViewController: UIViewController {
         
         
      
-//        if let movie = selectedMovie {
-//            delegate?.didChooseMovie(with: movie.imdbID)
-//            self.performSegue(withIdentifier: "yourSegueIdentifier", sender: self)
-//        } else {
-//
-//        }
-//    }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 
 
 

@@ -32,10 +32,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
            }
        }
     
-//    if let storedTheme = UserDefaults.standrd.string(forKey: "userTheme"),
-//        let theme = Theme(rawValue: storedTheme) {
-//            applyTheme (theme : theme)
-//        }
 
 
 //    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

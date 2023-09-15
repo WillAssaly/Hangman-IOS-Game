@@ -105,7 +105,6 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
         
         let userScore = indexPath.section == 0 ? dictionaryScores[indexPath.row] : filmsScores[indexPath.row]
         
-        // Assuming your cell has labels with tags 1, 2, and 3 for position, username, and score respectively
         let positionLabel = cell.viewWithTag(1) as? UILabel
         let usernameLabel = cell.viewWithTag(2) as? UILabel
         let scoreLabel = cell.viewWithTag(3) as? UILabel

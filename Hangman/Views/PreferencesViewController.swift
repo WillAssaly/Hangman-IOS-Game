@@ -68,11 +68,7 @@ class PreferencesViewController: UIViewController {
             }
         }
     
-//    @IBAction func themeChanged(_ sender: UISegmentedControl) {
-//        let selectedTheme = sender.selectedSegmentIndex == 0 ? "Device" : "Light"
-//        UserDefaults.standard.set(selectedTheme, forKey: "userTheme")
-//    }
-//
+
 
     /*
     // MARK: - Navigation

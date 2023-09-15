@@ -53,28 +53,12 @@ class EndGameViewController: UIViewController, UITextFieldDelegate {
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         guard let username = usernameTextField.text, !username.isEmpty else {
             print("Username is empty.")
-            // Optionally, show an alert to the user about the missing username
             return
         }
         saveGameData(username: username)
-//        fetchData() //Debug Core Data
     }
     
-//    func fetchData() { ///// Debug Core Data
-//        let fetchRequest: NSFetchRequest<Score> = Score.fetchRequest()
-//
-//        do {
-//            let fetchedScores = try context.fetch(fetchRequest)
-//            for score in fetchedScores {
-//                print("Username: \(score.username ?? "Unknown")")
-//                print("GameType: \(score.gameType ?? "Unknown")")
-//                print("Score: \(score.score)")
-//                print("-------------")
-//            }
-//        } catch let error {
-//            print("Failed to fetch data: \(error)")
-//        }
-//    }
+
 
     
     override func viewDidAppear(_ animated: Bool) {
@@ -91,7 +75,6 @@ class EndGameViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // This method is called once 'return' key is pressed.
         textField.resignFirstResponder()  // Dismiss the keyboard.
         return true
     }

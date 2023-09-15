@@ -47,49 +47,5 @@ class DictionaryViewController: UIViewController {
     }
 }
             
-//            override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//                if segue.identifier == "segueToGameViewController",
-//                   let gameVC = segue.destination as? GameViewController {
-//                    gameVC.mode = .dictionary
-//                    gameVC.delegate = self
-//                }
-//            }
-//            
-//            func gameDidLoadNewWord(_ word: String) {
-//                if let dictionaryWord = WordManager.shared.getWordsFromDefaults()?.first(where: { $0.word == word }) {
-//                    hintLabel.text = dictionaryWord.hint
-//                }
-//            }
-//        }
 
-
-
-
-
-
-
-//        if let word = WordManager.shared.getRandomWord() {
-//            JeuPendu.shared.jouer(avecMot: word.word)
-//        } else {
-//            print("Failed to fetch dictionary word.")
-//        }
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "segueToGameViewController",
-//           let gameVC = segue.destination as? GameViewController {
-//            gameVC.mode = .dictionary
-//            gameVC.delegate = self
-//        }
-//    }
-//
-//
-//
-//    func gameDidLoadNewWord(_ word: String) {
-//        if let dictionaryWord = WordManager.shared.getWordsFromDefaults()?.first(where: { $0.word == word }) {
-//            hintLabel.text = dictionaryWord.hint
-//        }
-//    }
-//
-//}
 

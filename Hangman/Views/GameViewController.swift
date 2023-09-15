@@ -37,7 +37,6 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        // You can leave this empty or move some view setup logic here if needed
     }
 
     func initializeGame() {
@@ -82,7 +81,7 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 
     
        
-       // MARK: - Game Start
+       // - Game Start
        
        func startGame(with movie: Movie) {
            currentAnswer = movie.Title
@@ -96,7 +95,7 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
            updateUI()
        }
        
-       // MARK: - UIPickerView DataSource & Delegate
+       // - UIPickerView DataSource & Delegate
            
        func numberOfComponents(in pickerView: UIPickerView) -> Int {
            return 1
@@ -110,7 +109,7 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
            return String(letters[row])
        }
        
-       // MARK: - Game Logic
+       // - Game Logic
     
     @IBAction func enterButtonPressed(_ sender: UIButton) {
         let selectedRow = userInputField.selectedRow(inComponent: 0)
@@ -172,7 +171,7 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
                 }
             }
             
-            // MARK: - Navigation
+            // - Navigation
             
             override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                 if segue.identifier == "endGameSegue",
@@ -189,18 +188,15 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 extension GameViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         // Reset the game based on the selected tab.
-        if tabBarController.selectedIndex == 0 { // Assuming 0 is the index for the movie mode.
+        if tabBarController.selectedIndex == 0 {
             mode = .movie
             isNewGame = true
-            viewWillAppear(true) // Or you can call another function that initializes the game.
-        } else if tabBarController.selectedIndex == 1 { // Assuming 1 is the index for the dictionary mode.
-            mode = .dictionary
+            viewWillAppear(true)
+        } else if tabBarController.selectedIndex == 1 {
             isNewGame = true
             viewWillAppear(true) // Or call your game initialization function.
         }
-        // Assuming 2 is the index for stats. Do nothing for this tab.
         else if tabBarController.selectedIndex == 2 {
-            // No game initialization.
         }
     }
 }

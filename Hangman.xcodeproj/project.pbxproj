@@ -11,9 +11,7 @@
 		EE0D3C9B2AB14F61001EA127 /* Localizable_Fr.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE0D3C9D2AB14F61001EA127 /* Localizable_Fr.strings */; };
 		EE0D3C9F2AB33D75001EA127 /* ScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D3C9E2AB33D75001EA127 /* ScoreTableViewCell.swift */; };
 		EE1057072A87D3810099E160 /* ListeDeFilmsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057062A87D37D0099E160 /* ListeDeFilmsData.swift */; };
-		EE10570F2A87D55F0099E160 /* FilmSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE10570E2A87D55F0099E160 /* FilmSchema.swift */; };
 		EE1057112A87D57F0099E160 /* ImagesSequenceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057102A87D57F0099E160 /* ImagesSequenceData.swift */; };
-		EE1057132A87D5970099E160 /* GestionnaireDeFilms.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057122A87D5970099E160 /* GestionnaireDeFilms.swift */; };
 		EE1057152A87D5AF0099E160 /* JeuPendu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057142A87D5AF0099E160 /* JeuPendu.swift */; };
 		EE1057172A8805C00099E160 /* MovieDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1057162A8805C00099E160 /* MovieDownloader.swift */; };
 		EE3646AC2AB10C6300EA553B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE3646AA2AB10C6300EA553B /* DataModel.xcdatamodeld */; };
@@ -60,9 +58,7 @@
 		EE0D3C9C2AB14F61001EA127 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable_Fr.strings; sourceTree = "<group>"; };
 		EE0D3C9E2AB33D75001EA127 /* ScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewCell.swift; sourceTree = "<group>"; };
 		EE1057062A87D37D0099E160 /* ListeDeFilmsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeDeFilmsData.swift; sourceTree = "<group>"; };
-		EE10570E2A87D55F0099E160 /* FilmSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSchema.swift; sourceTree = "<group>"; };
 		EE1057102A87D57F0099E160 /* ImagesSequenceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesSequenceData.swift; sourceTree = "<group>"; };
-		EE1057122A87D5970099E160 /* GestionnaireDeFilms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionnaireDeFilms.swift; sourceTree = "<group>"; };
 		EE1057142A87D5AF0099E160 /* JeuPendu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuPendu.swift; sourceTree = "<group>"; };
 		EE1057162A8805C00099E160 /* MovieDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDownloader.swift; sourceTree = "<group>"; };
 		EE3646AB2AB10C6300EA553B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -114,27 +110,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EE1057082A87D4C40099E160 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		EE1057092A87D4CF0099E160 /* Ressources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Ressources;
-			sourceTree = "<group>";
-		};
 		EE10570C2A87D4F40099E160 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				EE1057062A87D37D0099E160 /* ListeDeFilmsData.swift */,
-				EE10570E2A87D55F0099E160 /* FilmSchema.swift */,
 				EE1057102A87D57F0099E160 /* ImagesSequenceData.swift */,
-				EE1057122A87D5970099E160 /* GestionnaireDeFilms.swift */,
 				EE1057142A87D5AF0099E160 /* JeuPendu.swift */,
 				EE1057162A8805C00099E160 /* MovieDownloader.swift */,
 				EE7E42DE2A9A94E700E55B85 /* DictionaryDownloader.swift */,
@@ -183,8 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				EE10570C2A87D4F40099E160 /* Model */,
-				EE1057092A87D4CF0099E160 /* Ressources */,
-				EE1057082A87D4C40099E160 /* Controller */,
 				EE10570D2A87D5160099E160 /* Views */,
 				EEBCDE462A87CA9B00BCF0C9 /* SceneDelegate.swift */,
 				EEBCDE442A87CA9B00BCF0C9 /* AppDelegate.swift */,
@@ -349,11 +327,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE1057132A87D5970099E160 /* GestionnaireDeFilms.swift in Sources */,
 				EE0D3C9F2AB33D75001EA127 /* ScoreTableViewCell.swift in Sources */,
 				EE1057152A87D5AF0099E160 /* JeuPendu.swift in Sources */,
 				EE1057072A87D3810099E160 /* ListeDeFilmsData.swift in Sources */,
-				EE10570F2A87D55F0099E160 /* FilmSchema.swift in Sources */,
 				EE3646B22AB1370900EA553B /* AppEnums.swift in Sources */,
 				EE1057172A8805C00099E160 /* MovieDownloader.swift in Sources */,
 				EEBCDE492A87CA9B00BCF0C9 /* GameViewController.swift in Sources */,
