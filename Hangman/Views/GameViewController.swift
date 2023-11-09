@@ -24,10 +24,10 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBOutlet weak var PointsLabel: UILabel!
     
     // Flags and current game state properties.
-    var isNewGame: Bool = true // Indicates if a new game should be started
-    var currentAnswer: String? // The current answer the user is trying to guess
-       var mode: GameMode = .movie // The default game mode is set to movie
-       var letters = Array("abcdefghijklmnopqrstuvwxyz") // Array of alphabet letters for the picker
+    var isNewGame: Bool = true                               // Indicates if a new game should be started
+    var currentAnswer: String?                              // The current answer the user is trying to guess
+       var mode: GameMode = .movie                         // The default game mode is set to movie
+       var letters = Array("abcdefghijklmnopqrstuvwxyz")  // Array of alphabet letters for the picker
        
     // Optional properties for selected movie or word when playing in specific mode.
        var selectedMovie: Movie?
@@ -35,7 +35,7 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     
     // MARK: - View Lifecycle
-    // Called before the view is added to the view hierarchy.
+                                                  // Called before the view is added to the view hierarchy.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -45,7 +45,7 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     // Initializes the game based on the current game mode and selected options.
     func initializeGame() {
         if isNewGame {
-            // Using the existing word or movie, or fetching a new one
+                                           // Using the existing word or movie, or fetching a new one
             if let movie = selectedMovie {
                 startGame(with: movie)
             } else if let word = selectedWord {
@@ -63,24 +63,16 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         }
     }
    
-    // Called after the controller's view is loaded into memory.
-    override func viewDidLoad() {         super.viewDidLoad()
-        
-        // Assign the tab bar controller delegate to self.
-        self.tabBarController?.delegate = self
-
-        // Setup for the user input picker view.
-        userInputField.delegate = self
+                                                                         
+    override func viewDidLoad() {super.viewDidLoad()          // Called after the controller's view is loaded into memory.
+        self.tabBarController?.delegate = self               // Assign the tab bar controller delegate to self.
+                                                                   
+        userInputField.delegate = self                     // Setup for the user input picker view.
         userInputField.dataSource = self
-
-        // Disable interaction for the label that shows used letters.
-        userUsedLetters.isUserInteractionEnabled = false
-
-        // Prepare the letters for the picker view.
-        resetLetters()
-
-        // Initialize game
-        initializeGame()
+        userUsedLetters.isUserInteractionEnabled = false // Disable interaction for the label that shows used letters.
+                                                            
+        resetLetters()                                 // Prepare the letters for the picker view.
+        initializeGame()                              // Initialize game
     }
     
     
@@ -89,49 +81,44 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
        
        //MARK:  - Game Start
     
-       // Start a new game with a selected movie.
+                                                    // Start a new game with a selected movie.
        func startGame(with movie: Movie) {
-           currentAnswer = movie.Title // Set the current answer to the movie title
-           JeuPendu.shared.jouer(avec: movie) // Start the game with the movie object
-           updateUI() // Update the user interface
+           currentAnswer = movie.Title            // Set the current answer to the movie title
+           JeuPendu.shared.jouer(avec: movie)    // Start the game with the movie object
+           updateUI()                           // Update the user interface
        }
     
-       // Start a new game with a given word.
+                                                    // Start a new game with a given word.
        func startGame(with word: String) {
-           currentAnswer = word // Set the current answer to the word
-           JeuPendu.shared.jouer(avecMot: word) // Start the game with the word
-           updateUI() // Update the user interface
+           currentAnswer = word                   // Set the current answer to the word
+           JeuPendu.shared.jouer(avecMot: word)  // Start the game with the word
+           updateUI()                           // Update the user interface
        }
        
        // MARK: - UIPickerView DataSource & Delegate
         
-       // Define the number of components in the picker view.
+                                                                    // Define the number of components in the picker view.
        func numberOfComponents(in pickerView: UIPickerView) -> Int {
            return 1
        }
-    
-       // Define the number of rows in the picker view component.
+                                                                // Define the number of rows in the picker view component.
        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
            return letters.count
        }
     
-       // Provide a title for each row in the picker view.
+                                                            // Provide a title for each row in the picker view.
        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-           return String(letters[row]) // Each row title is a letter from the alphabet
+           return String(letters[row])                    // Each row title is a letter from the alphabet
        }
        
        // - Game Logic
     
     // Action for when the "Enter" button is pressed.
     @IBAction func enterButtonPressed(_ sender: UIButton) {
-        // Get the currently selected letter from the picker.
-        let selectedRow = userInputField.selectedRow(inComponent: 0)
+        let selectedRow = userInputField.selectedRow(inComponent: 0)  // Get the currently selected letter from the picker.
                 let selectedLetter = letters[selectedRow]
-        
-                // Pass the selected letter to the game logic to verify.
-                JeuPendu.shared.verifier(lettre: selectedLetter)
-                // Remove the used letter from the picker and refresh it.
-                letters.remove(at: selectedRow)
+                JeuPendu.shared.verifier(lettre: selectedLetter)    // Pass the selected letter to the game logic to verify.
+                letters.remove(at: selectedRow)                    // Remove the used letter from the picker and refresh it.
                 userInputField.reloadAllComponents()
                 
                 updateUI()
@@ -139,14 +126,17 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     // Updates the interface with the current game status.
     func updateUI() {
-        // Ensure UI updates are on the main thread.
+                                                            // Ensure UI updates are on the main thread.
         DispatchQueue.main.async {
-            // Update puzzle label, used letters, hangman image, and points label.
+                                                          // Update puzzle label, used letters, hangman image, and points label.
+            
             self.devinetteLabel.text = JeuPendu.shared.devinette.replacingOccurrences(of: "#", with: "-")
             self.userUsedLetters.text = JeuPendu.shared.lettreUtilisees
             self.hangmanView.image = JeuPendu.shared.image
             self.PointsLabel.text = "Errors: \(JeuPendu.shared.currentErrors) / 7"
-            // Determine if the game has been won or lost and perform a segue if so.
+            
+                                                    // Determine if the game has been won or lost and perform a segue if so.
+            
             let finalScoreValue = JeuPendu.shared.score
 
             switch JeuPendu.shared.gameStatus {
@@ -162,7 +152,7 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         }
     }
 
-             // Resets the letters array to include all alphabets and refreshes the picker view.
+            // Resets the letters array to include all alphabets and refreshes the picker view.
             func resetLetters() {
                 letters = Array("abcdefghijklmnopqrstuvwxyz")
                 userInputField.reloadAllComponents()
@@ -193,12 +183,12 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
             
             //MARK - Navigation
     
-            // Prepares for the segue to the end game view controller with the game results.
+                                                                                   // Prepares for the segue to the end game view controller with the game results.
             override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                 if segue.identifier == "endGameSegue",
                    let endGameVC = segue.destination as? EndGameViewController,
                    let gameInfo = sender as? EndOfGameInformation {
-                    // Pass the end of game information to the destination view controller.
+                                                                               // Pass the end of game information to the destination view controller.
                     endGameVC.gameInfo = gameInfo
                 }
             }
@@ -207,17 +197,16 @@ class GameViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 // MARK: - UITabBarControllerDelegate Extension
 // Extension for UITabBarControllerDelegate to manage tab bar interactions.
 
-extension GameViewController: UITabBarControllerDelegate {
-    // Called when a new tab is selected.
+extension GameViewController: UITabBarControllerDelegate {         // Called when new tab selected.
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        // Determine the game mode based on the selected tab and reset the game if needed.
-        if tabBarController.selectedIndex == 0 {
+                                                                 
+        if tabBarController.selectedIndex == 0 {               // Determine the game mode based on the selected tab and reset the game if needed.
             mode = .movie
             isNewGame = true
-            viewWillAppear(true) // Restart the game with the movie mode.
+            viewWillAppear(true)                            // Restart the game with the movie mode.
         } else if tabBarController.selectedIndex == 1 {
             isNewGame = true
-            viewWillAppear(true) // Restart the game with the dictionary mode.
+            viewWillAppear(true)                         // Restart the game with the dictionary mode.
         }
         else if tabBarController.selectedIndex == 2 {
         }
