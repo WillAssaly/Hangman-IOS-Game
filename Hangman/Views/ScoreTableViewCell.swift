@@ -10,19 +10,21 @@ import UIKit
 
 class ScoreTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var positionLabel: UILabel!
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var positionLabel: UILabel!  // Label to display the ranking position.
+    @IBOutlet weak var usernameLabel: UILabel! // Label to display the username.
+    @IBOutlet weak var scoreLabel: UILabel!   // Label to display the score.
     
+    // Called when the cell has been loaded from the storyboard.
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+                                         // Initialization code
     }
-
+    // Configures the cell with the ranking position, username, and score.
     func configure(position: Int, username: String, score: Int16) {
+                                                             // Positions array to convert the position index to a medal position.
         let positions = ["1st", "2nd", "3rd", "4th", "5th"]
-        positionLabel.text = positions[position]
-        usernameLabel.text = username
-        scoreLabel.text = "\(score)"
+        positionLabel.text = positions[position]           // Set the ranking position.
+        usernameLabel.text = username                     // Set the username.
+        scoreLabel.text = "\(score)"                     // Convert the score to a String and set it.
     }
 }
