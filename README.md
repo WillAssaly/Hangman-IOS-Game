@@ -1,4 +1,4 @@
-# Project Name
+# Hangman
 
 ## Overview
 The Hangman iOS game is an interactive and engaging application where players guess words or movie titles by selecting letters. The game advances with each correct guess, revealing the letters in the word or title. Incorrect guesses contribute to the drawing of a hangman, signaling the player's progress towards failure. The game aims for either the full revelation of the word or title (winning scenario) or the completion of the hangman drawing (losing scenario).
@@ -25,6 +25,5 @@ User Preferences: Options to customize game settings like language and theme.
 Persistence: User settings and scores are saved between sessions.
 
 ## Installation
-Provide step-by-step instructions on how to get a development environment running:
 ```bash
  git clone https://github.com/willassaly/hangman-ios.git
