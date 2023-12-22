@@ -26,4 +26,4 @@ Persistence: User settings and scores are saved between sessions.
 
 ## Installation
 ```bash
- git clone https://github.com/willassaly/hangman-ios.git
+ git clone https://github.com/willassaly/hangman-ios-game.git
